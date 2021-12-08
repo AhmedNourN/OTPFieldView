@@ -133,7 +133,11 @@ import UIKit
         switch otpInputType {
         case .numeric:
             otpField.keyboardType = .asciiCapableNumberPad
-            otpField.textContentType = .oneTimeCode
+            if #available(iOS 12.0, *) {
+              otpField.textContentType = .oneTimeCode
+            } else {
+              // Fallback on earlier versions
+            }
         case .alphabet:
             otpField.keyboardType = .alphabet
         case .alphaNumeric:
