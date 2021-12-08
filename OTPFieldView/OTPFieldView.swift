@@ -131,8 +131,8 @@ import UIKit
         
         // Set input type for OTP fields
         switch otpInputType {
-        case .numeric:
-            otpField.keyboardType = .numberPad
+        case .numeric:            
+            otpField.keyboardType = .phonePad
         case .alphabet:
             otpField.keyboardType = .alphabet
         case .alphaNumeric:
